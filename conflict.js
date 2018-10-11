@@ -1,3 +1,3 @@
-console.log('This is a conflict file');
+console.log('This is');
 
-console.log('Hope it works by not working');
+console.log('working');
