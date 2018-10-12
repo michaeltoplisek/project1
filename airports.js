@@ -14,7 +14,7 @@ const params = $.param({
       "APC-Auth-Secret": "775bcf3ef390fd9"
     }
   }).then(function (response) {
-    console.log(response);
+    console.log(response.airports[0].iata);
   });
 
 
