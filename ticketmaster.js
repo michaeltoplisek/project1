@@ -15,6 +15,8 @@ const displayEvents = function (e) {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
+
+        try {
         console.log(response);
         for (let i = 0; i < response._embedded.events.length; i++) {
             $("#eventDump").append(`<div><p>${response._embedded.events[i].name}</p>
@@ -22,6 +24,11 @@ const displayEvents = function (e) {
             <p>${response._embedded.events[i]._embedded.venues[0].city.name}</p>
             <button id='eventFlight'>Find flight Info</button></div>`)
             console.log(response._embedded.events[i].name)
+        }
+        console.log(response._embedded.events[0]._embedded.venues[0].city.name)
+        console.log(response._embedded.events[0]._embedded.venues[0].state.stateCode)
+        } catch(error) {
+            $('#eventDump').text('No events found');
         }
             //$('#eventFlight').on('click', airportcodeAjaxcall) need to find a way to respond 
             //to the button and grab city name from whicher event is in that div
