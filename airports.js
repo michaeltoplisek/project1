@@ -1,9 +1,9 @@
 
 const params = $.param({
     
-    "term": "los angeles"
+    "term": "atlanta"
 
-
+   
   });
   
   $.ajax({
