@@ -22,7 +22,8 @@ const displayEvents = function (e) {
             $("#eventDump").append(`<div><p>${response._embedded.events[i].name}</p>
             <p>${response._embedded.events[i].dates.start.localDate}</p>
             <p>${response._embedded.events[i]._embedded.venues[0].city.name}</p>
-            <button id='eventFlight'>Find flight Info</button></div>`)
+            <p><a target="_blank" href="${response._embedded.events[i].url}">Click here to buy tickets</a></p>
+            <p><button id='eventFlight'>Find flight Info</button></p></div>`)
             console.log(response._embedded.events[i].name)
         }
         console.log(response._embedded.events[0]._embedded.venues[0].city.name)
