@@ -19,9 +19,13 @@ const displayEvents = function (e) {
         for (let i = 0; i < response._embedded.events.length; i++) {
             $("#eventDump").append(`<div><p>${response._embedded.events[i].name}</p>
             <p>${response._embedded.events[i].dates.start.localDate}</p>
-            <p>${response._embedded.events[i]._embedded.venues[0].city.name}</p></div>`)
+            <p>${response._embedded.events[i]._embedded.venues[0].city.name}</p>
+            <button id='eventFlight'>Find flight Info</button></div>`)
             console.log(response._embedded.events[i].name)
         }
+            //$('#eventFlight').on('click', airportcodeAjaxcall) need to find a way to respond 
+            //to the button and grab city name from whicher event is in that div
+
     })
 }
 
