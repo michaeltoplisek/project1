@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="ticketmaster-form">
+        <label for="info input">Enter Keyword</label>
+        <input type="text" id="keyword-input">
+        <br>
+
+        <br>
+        <label for="date input">start date</label>
+        <input type="text" id="start-input" value="2018-01-01">
+        <br>
+
+        <br>
+        <label for="end input">end date</label>
+        <input type="text" id="end-input" value="2018-10-12">
+        <br>
+
+        <br>
+        <label for="city input">Enter US City</label>
+        <input type="text" id="city-input" value="Atlanta">
+        <br>
+
+        <br>
+        <label for="state input">Enter US State</label>
+        <input type="text" id="state-input" value="GA">
+        <br>
+        <!-- Button triggers new stock to be added -->
+        <input id="add-info" type="submit" value="Enter">
+    </form>
+
+    <div id='concert-dump'></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src='ticketmasterAPI.js'></script>
+</body>
+
+</html>
