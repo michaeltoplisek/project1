@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 1</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 
@@ -18,36 +18,99 @@
 <body>
 
     <header>
-        <!-- sticky nav bar goes here - include links to the top of each scrolling page  -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Hidden brand</a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
     </header>
 
     <div class="container">
         <!-- this container holds all the information on the page. Put the  -->
 
         <section id="welcomePage">
-            <!-- This div holds the "welcome to the site" page. Use a jumbotron, give a little description of the app and add a button to enter. -->
-
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Welcome to Our Site!</h1>
+                        <p class="lead">The fastest and most convenient event search site on the web! Please input th required
+                            information below and we will search the web for events, flights and hotels and post the results
+                            in an easy to navigate format!</p>
+                        <hr class="my-4">
+                        <p>In the form below, enter the type of event you would like to attend followed by the location of
+                            the event and a date range. When you are finished click submit and we will find events for you!</p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-            <!--This is the input for the airport code return-->
-            <form id="multi-form">
-                <input type="text" name="term" id="city-input" placeholder="City name or airport code" />
-            </form>
-
-
-            <div id="eventResults">
-                <!--This space is to return their event results-->
+        <form>
+            <div class="form-row">
+                <div class="col-7">
+                    <label for="exampleFormControlInput1">Event Type</label>
+                    <select class="custom-select custom-select-md mb-3">
+                        <option selected>Select Event Type</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1">City</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="City">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1">State</label>
+                    <input type="text" class="form-control" placeholder="State">
+                </div>
             </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="exampleFormControlInput1">Start Date</label>
+                    <input type="date" name="bday" class="form-control" id="exampleFormControlInput1" min="1979-12-31">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1">End Date</label>
+                    <input type="date" name="bday" class="form-control" id="exampleFormControlInput1" max="1979-12-31">
+                </div>
 
-
-            <div id="flightResults">
-                <!-- This space is to return their flight results -->
             </div>
+        </form>
 
 
-            <div id="hotelResults">
-                <!-- This space is to return their hotel results -->
-            </div>
+        <div id="eventResults">
+            <!--This space is to return their event results-->
+        </div>
+
+
+        <div id="flightResults">
+            <!-- This space is to return their flight results -->
+        </div>
+
+
+        <div id="hotelResults">
+            <!-- This space is to return their hotel results -->
+        </div>
         </section>
         <div>
 
@@ -61,10 +124,9 @@
             <script src="./airports.js"></script>
 
             <script src="ticketmaster.js"></script>
-          src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-<script src="gibibo.js" charset="utf-8"></script>
+
+            <script src="gibibo.js" charset="utf-8"></script>
+            
 </body>
 
 </html>
