@@ -26,7 +26,7 @@ const displayEvents = function (e) {
             <p><button id='eventFlight'>Find flight Info</button></p></div>`)
                 console.log(response._embedded.events[i].name)
             }
-            $('#eventFlight').on('click',findAiport(eventCity))
+            $('#eventFlight').on('click', findAirport(eventCity))
             console.log(response._embedded.events[0]._embedded.venues[0].city.name)
             console.log(response._embedded.events[0]._embedded.venues[0].state.stateCode)
 
