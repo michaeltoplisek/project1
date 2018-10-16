@@ -35,7 +35,7 @@ const displayEvents = function (e) {
             $('.eventFlight').on('click', function () {
                 cityName = $(this).attr('data-city');
                 console.log(cityName);
-                $('#flightResults').append(`Enter leave date: <input id="leaveDate" type='text'/> Enter return date: <input id="returnDate" type="text"/>
+                $('#flightResults').append(`Enter leave date: <input id="leaveDate" value="yyyymmdd" type='text'/> Enter return date: <input id="returnDate" value="yyyymmdd" type="text"/>
                 Enter source city: <input type="text" id="srcDes"/><button id="flightSearch">Search them flights</button>`)
                 $('#flightSearch').on('click', function () {
                     const leaveDate = $('#leaveDate').val();
@@ -46,7 +46,7 @@ const displayEvents = function (e) {
                     Promise.all([destAirportReq, srcAirportReq]).then(function (responses) {
                         let iataDest = responses[0].airports[0].iata;
                         let iataSrc = responses[1].airports[0].iata;
-                        getFlightInfo(iataSrc, iataDest, '20181017', '20181030'); 
+                        getFlightInfo(iataSrc, iataDest, leaveDate, returnDate); 
                     });
                 })
             })
