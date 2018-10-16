@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project 1</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
 
@@ -31,7 +32,11 @@
 
             <!--This is the input for the airport code return-->
             <form id="multi-form">
-                <input type="text" name="term" id="city-input" placeholder="City name or airport code" />
+                <input type="text" name="term" id="eventCity" placeholder="City name or airport code">
+                <input type="text" name="" id="eventName" placeholder="event type" value="">
+                <input type="text" name="" id="startDate" placeholder="event start" value="">
+                <input type="text" name="" id="endDate" placeholder="event end" value="">
+                <input type="submit" name="" value="find events" id="searchButton">
             </form>
 
 
@@ -43,7 +48,16 @@
             <div id="flightResults">
                 <!-- This space is to return their flight results -->
             </div>
+<div class="modal hide">
+<form class="flightInfo">
+  <input type="text" name="" placeholder="flying from:" value="">
+  <input type="text" name="" placeholder="destination" value="">
+  <input type="text" name="" placeholder="leave date:" value="">
+  <input type="text" name="" placeholder="return date:" value="">
 
+</form>
+
+</div>
 
             <div id="hotelResults">
                 <!-- This space is to return their hotel results -->
@@ -58,13 +72,12 @@
 
             <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-            <script src="./airports.js"></script>
-
+            <script src="airports.js"></script>
+<script src="gibibo.js"></script>
             <script src="ticketmaster.js"></script>
-          src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-<script src="gibibo.js" charset="utf-8"></script>
+
+
+<script src="app.js" charset="utf-8"></script>
 </body>
 
 </html>
