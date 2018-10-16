@@ -1,16 +1,19 @@
 body{
-    background-image: url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae8584287da6fac5895bbe4fb80f9f5f&auto=format&fit=crop&w=1350&q=80");
+    background-image: url('assests/event2.jpg');
     background-repeat:no-repeat;
     background-size:cover;
 }
 .navbar {
-   opacity: 0.3;
-   border-bottom: 1px solid gray;
+   opacity: 0.7; 
+   border-bottom: 0px inset grey;
    background-color:black;
  }
+
+  
  .jumbotron{
      margin-top:100px;
      opacity:0.5;
+     
  }
  .display-4{
     color: black;
@@ -93,6 +96,7 @@ body{
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
+    
   }
   .link-3:hover {
     background-color: black;
@@ -131,7 +135,9 @@ body{
     padding-bottom: 5px;
     }
 
+.animated{
 
+}
  
  
  
