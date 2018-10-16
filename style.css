@@ -1,5 +1,5 @@
 body{
-    background-image: url('assests/event2.jpg');
+    background-image: url('assests/projpic2.jpg');
     background-repeat:no-repeat;
     background-size:cover;
 }
@@ -12,7 +12,7 @@ body{
   
  .jumbotron{
      margin-top:100px;
-     opacity:0.5;
+     opacity:0.6;
      
  }
  .display-4{
@@ -27,14 +27,15 @@ body{
     margin-top:10px;
     opacity:0.7;
     color: black;
-    background-color:burlywood;
+    background-color:greenyellow;
     border:none;
     font-weight:bold;
  }
  label{
-     color:whitesmoke;
+     color:black;
      font-weight:bold;
-     opacity:0.5;
+     opacity:0.8;
+     font-size:22px;
  }
  a{
      font-weight:bold;
@@ -134,10 +135,9 @@ body{
     font-size: 14px;
     padding-bottom: 5px;
     }
-.input-label{
-    font-weight:bold;
-    font-size:22px;
-    color:black;
-}
+    .hide{
+        display:none;
+    }
+
  
  
