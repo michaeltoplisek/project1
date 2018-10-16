@@ -1,83 +1,106 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 1</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
 
-    <header>
-        <!-- sticky nav bar goes here - include links to the top of each scrolling page  -->
-    </header>
+  <header>
+    <!-- sticky nav bar goes here - include links to the top of each scrolling page  -->
+  </header>
 
-    <div class="container">
-        <!-- this container holds all the information on the page. Put the  -->
+  <div class="container">
+    <!-- this container holds all the information on the page. Put the  -->
 
-        <section id="welcomePage">
-            <!-- This div holds the "welcome to the site" page. Use a jumbotron, give a little description of the app and add a button to enter. -->
+    <section id="welcomePage">
+      <!-- This div holds the "welcome to the site" page. Use a jumbotron, give a little description of the app and add a button to enter. -->
 
-        </section>
+    </section>
 
-            <!--This is the input for the airport code return-->
-            <form id="multi-form">
-                <input type="text" name="term" id="eventCity" placeholder="City name or airport code">
-                <input type="text" name="" id="eventName" placeholder="event type" value="">
-                <input type="text" name="" id="startDate" placeholder="event start" value="">
-                <input type="text" name="" id="endDate" placeholder="event end" value="">
-                <input type="submit" name="" value="find events" id="searchButton">
-            </form>
-
-
-            <div id="eventResults">
-                <!--This space is to return their event results-->
-            </div>
+    <!--This is the input for the airport code return-->
+    <form id="multi-form">
+      <input type="text" name="term" id="eventCity" placeholder="City name or airport code">
+      <input type="text" name="" id="eventName" placeholder="event type" value="">
+      <input type="text" name="" id="startDate" placeholder="event start" value="">
+      <input type="text" name="" id="endDate" placeholder="event end" value="">
+      <input type="submit" name="" value="find events" id="searchButton">
+    </form>
 
 
-            <div id="flightResults">
-                <!-- This space is to return their flight results -->
-            </div>
-<div class="modal hide">
-<form class="flightInfo">
-  <input type="text" name="" placeholder="flying from:" value="">
-  <input type="text" name="" placeholder="destination" value="">
-  <input type="text" name="" placeholder="leave date:" value="">
-  <input type="text" name="" placeholder="return date:" value="">
+    <div id="eventResults">
+      <!--This space is to return their event results-->
+    </div>
 
-</form>
+
+    <div id="flightResults">
+      <!-- This space is to return their flight results -->
+    </div>
+
+
+
+
+
+
+    <div id="hotelResults">
+      <!-- This space is to return their hotel results -->
+    </div>
+    </section>
+    
+    <div>
+      <div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="flightModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Flight Finder</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="modal-body">
+                <form class="flightInfo">
+                  <input type="text" id="srcDes" name="" placeholder="flying from:" value="">
+                  <input type="text" id="leaveDate" name="" placeholder="leave date:" value="">
+                  <input type="text" id="returnDate" name="" placeholder="return date:" value="">
+                </form>
+
+<div class="flightResults">
 
 </div>
 
-            <div id="hotelResults">
-                <!-- This space is to return their hotel results -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary searchFlight">find flight</button>
+              </div>
             </div>
-        </section>
-        <div>
-
-            <footer>
-                <!-- footer bar with copyright info goes here -->
-            </footer>
-
-
-            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-            <script src="airports.js"></script>
-<script src="gibibo.js"></script>
-            <script src="ticketmaster.js"></script>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <!-- footer bar with copyright info goes here -->
+      </footer>
 
 
-<script src="app.js" charset="utf-8"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+      <script src="airports.js"></script>
+      <script src="gibibo.js"></script>
+      <script src="ticketmaster.js"></script>
+
+
+      <script src="app.js" charset="utf-8"></script>
 </body>
 
 </html>
