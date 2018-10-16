@@ -134,10 +134,10 @@ body{
     font-size: 14px;
     padding-bottom: 5px;
     }
-
-.animated{
-
+.input-label{
+    font-weight:bold;
+    font-size:22px;
+    color:black;
 }
- 
  
  
