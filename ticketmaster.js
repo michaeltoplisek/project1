@@ -22,17 +22,16 @@ const displayEvents = function (e) {
             $('#eventResults').empty();
             console.log(response);
             for (let i = 0; i < response._embedded.events.length; i++) {
+
                 $('#eventResults').append(`<div row><div col><div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
+                <img class="card-img-top" src="${response._embedded.events[i].images[0].url}" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${response._embedded.events[i].name}</h5>
                   <p class="card-text">${response._embedded.events[i].dates.start.localDate} <br />
                   ${response._embedded.events[i]._embedded.venues[0].city.name}</p>
                   <a target="_blank" href="${response._embedded.events[i].url}" class="btn btn-primary">Click here to buy tickets</a>
-                </div>  <p><button class="eventFlight btn flight-btn btn-primary" data-toggle="modal" data-target="#flightModal" data-city="${response._embedded.events[i]._embedded.venues[0].city.name}">Find flight Info</button></p></div></div>
+                </div>  <p><button class="eventFlight btn flight-btn btn-primary" data-toggle="modal" data-target="#modalOpen" data-city="${response._embedded.events[i]._embedded.venues[0].city.name}">Find flight Info</button></p></div></div>
               </div>`);
-           
-
                 //cityName = response._embedded.events[i]._embedded.venues[0].city.name
                 //console.log(cityName)
                 const stateCode = response._embedded.events[i]._embedded.venues[0].state.stateCode;
@@ -43,9 +42,11 @@ const displayEvents = function (e) {
                 console.log(cityName);
                 // $('#flightResults').append(`Enter leave date: <input id="leaveDate" type='text'/> Enter return date: <input id="returnDate" type="text"/>
                 // Enter source city: <input type="text" id="srcDes"/><button id="flightSearch">Search them flights</button>`)
-                $('.flightModal').on('click', function () {
-                    const leaveDate = $('#leaveDate').val();
-                    const returnDate = $('#returnDate').val();
+                $('.searchFlight').on('click', function () {
+                    let date1 = $('#leaveDate').val();
+                    let date2 = $('#returnDate').val();
+                    const leaveDate = date1.replace(/-/g,"");
+                    const returnDate = date2.replace(/-/g,"");
                     const srcCity = $('#srcDes').val();
                     const destAirportReq = findAirport(cityName);
                     const srcAirportReq = findSrcAirport(srcCity);
@@ -54,7 +55,7 @@ const displayEvents = function (e) {
                         let iataSrc = responses[1].airports[0].iata;
                         console.log(iataDest);
                         console.log(iataSrc);
-                        $('.searchFlight').on('click', getFlightInfo(iataSrc, iataDest, leaveDate, returnDate));
+                        getFlightInfo(iataSrc, iataDest, leaveDate, returnDate);
                     });
                 })
             })

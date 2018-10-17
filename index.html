@@ -154,7 +154,7 @@
         </div>
 
         <div>
-      <div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="flightModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalOpen" tabindex="-1" role="dialog" aria-labelledby="modalOpenLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -164,9 +164,9 @@
               </button>
               <div class="modal-body">
                 <form class="flightInfo">
-                  <input type="text" id="srcDes" name="" placeholder="flying from:" value="">
-                  <input type="text" id="leaveDate" name="" placeholder="leave date:" value="">
-                  <input type="text" id="returnDate" name="" placeholder="return date:" value="">
+                  <input type="text" id="srcDes" name="" placeholder="flying from:" value="" required>
+                  <input type="date" id="leaveDate" name="leave" placeholder="leave date:" value="" required>
+                  <input type="date" id="returnDate" name="return" placeholder="return date:" value="" required>
                 </form>
 
 <div class="flightResults">
