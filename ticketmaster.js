@@ -62,3 +62,4 @@ const displayEvents = function (e) {
 }
 
 $('#searchButton').on('click', displayEvents)
+
