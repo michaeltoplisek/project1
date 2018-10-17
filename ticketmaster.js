@@ -22,11 +22,17 @@ const displayEvents = function (e) {
             $('#eventResults').empty();
             console.log(response);
             for (let i = 0; i < response._embedded.events.length; i++) {
-                $("#eventResults").append(`<div><img src="${response._embedded.events[i].images[0].url}"><p>${response._embedded.events[i].name}</p>
-            <p>${response._embedded.events[i].dates.start.localDate}</p>
-            <p>${response._embedded.events[i]._embedded.venues[0].city.name}</p>
-            <p><a target="_blank" href="${response._embedded.events[i].url}">Click here to buy tickets</a></p>
-            <p><button class="eventFlight btn btn-primary" data-toggle="modal" data-target="#flightModal" data-city="${response._embedded.events[i]._embedded.venues[0].city.name}">Find flight Info</button></p></div>`);
+                $('#eventResults').append(`<div row><div col><div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">${response._embedded.events[i].name}</h5>
+                  <p class="card-text">${response._embedded.events[i].dates.start.localDate} <br />
+                  ${response._embedded.events[i]._embedded.venues[0].city.name}</p>
+                  <a target="_blank" href="${response._embedded.events[i].url}" class="btn btn-primary">Click here to buy tickets</a>
+                </div>  <p><button class="eventFlight btn flight-btn btn-primary" data-toggle="modal" data-target="#flightModal" data-city="${response._embedded.events[i]._embedded.venues[0].city.name}">Find flight Info</button></p></div></div>
+              </div>`);
+           
+
                 //cityName = response._embedded.events[i]._embedded.venues[0].city.name
                 //console.log(cityName)
                 const stateCode = response._embedded.events[i]._embedded.venues[0].state.stateCode;

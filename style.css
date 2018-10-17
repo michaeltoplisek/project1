@@ -23,7 +23,7 @@ body{
     color: black;
     font-weight: bold;
 }
-.submit-btn {
+.submit-btn  {
     margin-top:10px;
     opacity:0.7;
     color: black;
@@ -139,5 +139,43 @@ body{
         display:none;
     }
 
+    .btn {
+  margin-top:10px;
+  color: black;
+  background-color:greenyellow;
+  border:none;
+  font-weight:bold;
+  margin-left: 10px;
+
+}
  
- 
+.flight-btn {
+  margin-top:10px;
+  color: #faf8f8;
+  background-color:#370347;
+  border:none;
+  font-weight:bold;
+  margin-left: 65px;
+}
+
+
+.card {
+  opacity:0.7;
+  margin-top: 10px;
+  border: 2px solid #370347;
+  padding: 10px 10px; 
+
+}
+
+.card-title {
+
+  color:black;
+     font-weight:bold;
+     opacity:0.8;
+     font-size:22px
+}
+
+.card-text {
+  color: black;
+  font-weight: bold;
+}
