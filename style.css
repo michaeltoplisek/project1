@@ -32,10 +32,11 @@ body{
     font-weight:bold;
  }
  label{
-     color:black;
+     color:white;
      font-weight:bold;
-     opacity:0.8;
-     font-size:22px;
+     
+     font-size:26px;
+     
  }
  a{
      font-weight:bold;
@@ -179,3 +180,36 @@ body{
   color: black;
   font-weight: bold;
 }
+
+.modal-content{
+  background-color:black;
+  opacity: 0.7;
+  width:600px;
+}
+
+.modal-title {
+  font-weight: bold;
+  color: #fff;
+
+}
+.modal-footer{
+  border:none;
+}
+.modal-header{
+  border:none;
+}
+#srcDes {
+  font-weight:bold;
+  color:black;
+}
+
+#leaveDate {
+  font-weight:bold;
+  color:black;
+}
+
+#returnDate {
+  font-weight:bold;
+  color:black;
+}
+
