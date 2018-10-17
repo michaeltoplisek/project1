@@ -52,12 +52,12 @@
 
     <!-- The social media icon bar -->
     <div class="icon-bar">
-        <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
-            href="https://unsplash.com/@_ryan_?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+        <!-- <a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+            href="#"
             target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Ryan"><span
                 style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
                     viewBox="0 0 32 32"><title>unsplash-logo</title>
-                    <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ryan</span></a>
+                    <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Ryan</span></a> -->
         <a href="https://www.facebook.com/" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="https://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
         <a href="https://www.google.com/" class="google"><i class="fa fa-google"></i></a>
@@ -89,16 +89,17 @@
             <div class="form-row">
                 <div class="col-7">
                     <label for="exampleFormControlInput1" class='input-label'>Event Type</label>
-                    <select class="custom-select custom-select-md mb-3">
+                    <!-- <select class="custom-select custom-select-md mb-3">
                         <option selected>Select Event Type</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
-                    </select>
+                    </select> -->
+                    <input type="text" class="form-control" id="eventName" placeholder="Event Type">
                 </div>
                 <div class="col">
                     <label for="exampleFormControlInput1" class='input-label'>City</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="City">
+                    <input type="text" class="form-control" id="eventCity" placeholder="City">
                 </div>
                 <div class="col">
                     <label for="exampleFormControlInput1" class='input-label'>State</label>
@@ -108,21 +109,21 @@
             <div class="form-row">
                 <div class="col">
                     <label for="exampleFormControlInput1" class='input-label'>Start Date</label>
-                    <input type="date" name="bday" class="form-control" id="exampleFormControlInput1" min="1979-12-31">
+                    <input type="date" name="bday" class="form-control" id="startDate" min="1979-12-31">
                 </div>
                 <div class="col">
                     <label for="exampleFormControlInput1" class='input-label'>End Date</label>
-                    <input type="date" name="bday" class="form-control" id="exampleFormControlInput1" max="2020-12-31">
+                    <input type="date" name="bday" class="form-control" id="endDate" max="2020-12-31">
                 </div>
 
             </div>
             <div class="form-row">
                 <div class="col-md-12">
-                    <a class="btn btn-primary btn-lg submit-btn" href="#" role="button">Find Events</a>
+                    <a class="btn btn-primary btn-lg submit-btn" href="#" id="searchButton" role="button">Find Events</a>
                 </div>
             </div>
         </form>
- 
+
 
 
         <div id="eventResults">
@@ -154,7 +155,7 @@
                 <p class="footerContent d-flex">ATMM &copy; 2018</p>
             </footer>
         </div>
-    
+
         <div>
       <div class="modal fade" id="flightModal" tabindex="-1" role="dialog" aria-labelledby="flightModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -185,25 +186,16 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <!-- <script src="navbarEffect.js"></script>
-
-        <script src="./airports.js"></script>
-
-        <script src="ticketmaster.js"></script> -->
-
-        <!-- <script src="gibibo.js" charset="utf-8"></script> -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-            
+
             <script src="navbarEffect.js"></script>
 
             <script src="airports.js"></script>
             <script src="gibibo.js" charset="utf-8"></script>
-    
+
             <script src="ticketmaster.js"></script>
 
 

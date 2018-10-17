@@ -22,7 +22,7 @@ const displayEvents = function (e) {
             $('#eventResults').empty();
             console.log(response);
             for (let i = 0; i < response._embedded.events.length; i++) {
-                $("#eventResults").append(`<div><p>${response._embedded.events[i].name}</p>
+                $("#eventResults").append(`<div><img src="${response._embedded.events[i].images[0].url}"><p>${response._embedded.events[i].name}</p>
             <p>${response._embedded.events[i].dates.start.localDate}</p>
             <p>${response._embedded.events[i]._embedded.venues[0].city.name}</p>
             <p><a target="_blank" href="${response._embedded.events[i].url}">Click here to buy tickets</a></p>
@@ -37,7 +37,7 @@ const displayEvents = function (e) {
                 console.log(cityName);
                 // $('#flightResults').append(`Enter leave date: <input id="leaveDate" type='text'/> Enter return date: <input id="returnDate" type="text"/>
                 // Enter source city: <input type="text" id="srcDes"/><button id="flightSearch">Search them flights</button>`)
-                $('#flightModal').on('click', function () {
+                $('.flightModal').on('click', function () {
                     const leaveDate = $('#leaveDate').val();
                     const returnDate = $('#returnDate').val();
                     const srcCity = $('#srcDes').val();
@@ -62,4 +62,3 @@ const displayEvents = function (e) {
 }
 
 $('#searchButton').on('click', displayEvents)
-
