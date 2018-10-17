@@ -212,4 +212,18 @@ body{
   font-weight:bold;
   color:black;
 }
+.flightResults p{
+  color:white;
+  font-weight:bold;
+
+
+}
+.flightDiv{
+  border:1px solid greenyellow;
+  margin-bottom:10px;
+  width:350px;
+  padding-left: 10px;
+  padding-bottom: 10px
+}
+
 
