@@ -1,0 +1,143 @@
+body{
+    background-image: url('assests/projpic2.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.navbar {
+   opacity: 0.7; 
+   border-bottom: 0px inset grey;
+   background-color:black;
+ }
+
+  
+ .jumbotron{
+     margin-top:100px;
+     opacity:0.6;
+     
+ }
+ .display-4{
+    color: black;
+    font-weight: bold;
+ }
+.lead{
+    color: black;
+    font-weight: bold;
+}
+.submit-btn {
+    margin-top:10px;
+    opacity:0.7;
+    color: black;
+    background-color:greenyellow;
+    border:none;
+    font-weight:bold;
+ }
+ label{
+     color:black;
+     font-weight:bold;
+     opacity:0.8;
+     font-size:22px;
+ }
+ a{
+     font-weight:bold;
+     color:grey;
+     opacity:1.0;
+ }
+ .icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .instagram{
+    background: #125688;
+    color: white;
+  }
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .link-3 {
+    transition: 0.4s;
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+    
+  }
+  .link-3:hover {
+    background-color: black;
+    color: #EEA200;
+    padding: 24px 10px;
+  }
+  .card-footer {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 1;
+    color: #fff;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-top: 0, 30;
+    }
+    
+    .footerContent {
+       justify-content: center;
+    }
+    
+    .footerLink {
+       justify-content: space-evenly
+    }
+    .card-footer a {
+       color: #fff;
+       text-align: center;
+    }
+    
+    .card-footer a:hover {
+       color: #f2d89f;
+       text-decoration: underline;
+    }
+    
+    .card-footer p {
+    font-size: 14px;
+    padding-bottom: 5px;
+    }
+    .hide{
+        display:none;
+    }
+
+ 
+ 
