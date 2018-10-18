@@ -26,7 +26,7 @@ let returnDate = backDate;
     // hash for flight, Airline Name, Origin airport,Departure time,Overall flight duration,Number of stops, destination, secondary flight destination, arrival time of secondary flight, total cost of trip
     // <p>  Total Cost: ${shortArray[i].fare.grossamount} </p>
     for (let i = 0; i < shortArray.length; i++) {
-      $('.flightResults').append(`<div>
+      $('.flightResults').append(`<div class='flightDiv'>
       <p> Flight Code: ${shortArray[i].FlHash} </p>
       <p> Airline Name: ${shortArray[i].airline} </p>
       <p> Flying out of: ${shortArray[i].origin} </p>
