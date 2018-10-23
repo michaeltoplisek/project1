@@ -1,4 +1,4 @@
-About Event Finder
+About Event Finder : GitHub Pages: https://michaeltoplisek.github.io/project1/
 ________________
 
 Event Finder was created to give users a fast and efficient way to attend their favorite events. If you hate having to go from site to site to find events, set up transportation and find lodging just to make weekend plans, this is the app for you! We believe you should be able to get all of that in one place.
